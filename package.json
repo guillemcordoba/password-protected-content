@@ -1,0 +1,53 @@
+{
+  "name": "password-protected-content",
+  "version": "0.0.1",
+  "description": "Custom element to protect a ",
+  "author": "guillem.cordoba@gmail.com",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guillemcordoba/profiles-zome.git"
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./locales/*": "./locales/*",
+    "./dist/*": "./dist/*"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "src"
+  ],
+  "scripts": {
+    "start": "vite --clearScreen false",
+    "build": "tsc && pnpm localize:build",
+    "lint": "eslint src",
+    "analyze": "cem analyze --litelement --exclude dist",
+    "format": "eslint src --fix",
+    "localize:extract": "lit-localize extract",
+    "localize:build": "lit-localize build",
+    "prepare": "pnpm build"
+  },
+  "dependencies": {
+    "@lit/localize": "^0.12.2",
+    "@mdi/js": "^7.4.47",
+    "@shoelace-style/shoelace": "^2.11.0",
+    "blakejs": "^1.2.1",
+    "js-base64": "^3.7.7",
+    "lit": "^3.0.2"
+  },
+  "devDependencies": {
+    "@custom-elements-manifest/analyzer": "^0.10.3",
+    "@lit/localize-tools": "^0.6.3",
+    "tslib": "^2.0.0",
+    "typescript": "^5.4.0",
+    "vite": "^4.0.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "customElements": "custom-elements.json",
+  "type": "module"
+}

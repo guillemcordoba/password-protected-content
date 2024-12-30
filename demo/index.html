@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        background: black;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        display: flex;
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="sl-theme-dark">
+    <password-protected-content
+      password-hashes="4N81mEUWtq+dWz3q/sq3tRmBA8L/3fMcVRbathJzY0cpyRCeA5rhasj3hPy1i9j9m+wL4x8zWw/IQelsKJjx3Q=="
+    >
+      <div>hey!</div>
+    </password-protected-content>
+
+    <script type="module">
+      import "@shoelace-style/shoelace/dist/themes/dark.css";
+
+      import "../src/index.ts";
+    </script>
+  </body>
+</html>
