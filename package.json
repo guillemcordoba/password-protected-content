@@ -1,6 +1,6 @@
 {
   "name": "password-protected-content",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Custom element to protect a ",
   "author": "guillem.cordoba@gmail.com",
   "license": "MIT",
@@ -15,11 +15,7 @@
     "./locales/*": "./locales/*",
     "./dist/*": "./dist/*"
   },
-  "files": [
-    "dist",
-    "README.md",
-    "src"
-  ],
+  "files": ["dist", "README.md", "src"],
   "scripts": {
     "start": "vite --clearScreen false",
     "build": "tsc && pnpm localize:build",
