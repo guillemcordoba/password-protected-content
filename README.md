@@ -1,9 +1,5 @@
-# @darksoil-studio/profiles-zome
+# <password-protected-content>
 
-Frontend module for the [profiles zome](https://github.com/darksoil-studio/profiles-zome).
+Protect the content of your webpage behind a simple password check.
 
-This package includes types, a client and a store, and a collection of Custom Elements to build Holochain applications that automatically connect and interact with the profiles zome. 
-
-Read about how to include both the zome and this frontend module in your application here:
-
-- https://darksoil.studio/profiles-zome
+> WARNING! This is not actually safe. Any attacker can easily work around this if they'd invest the time in doing so.
