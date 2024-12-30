@@ -38,11 +38,8 @@ export class PasswordProtectedContent extends LitElement {
   @property({ attribute: "password-hashes" })
   passwordHashes: string = "";
 
-  content: string | undefined;
-
   firstUpdated() {
     if (!this.passwordEntered) {
-      this.content = this.innerHTML;
       this.innerHTML = "";
     }
   }
@@ -52,7 +49,6 @@ export class PasswordProtectedContent extends LitElement {
   }
 
   get passwordEntered() {
-    console.log(this.passwordHashes);
     return !!this.hashes.find((passwordHash) => {
       const storedPassword = getPassword(passwordHash);
       if (!storedPassword) return false;
@@ -68,7 +64,7 @@ export class PasswordProtectedContent extends LitElement {
     const passwordHash = hash(password);
     if (this.passwordHashes.includes(passwordHash)) {
       setPassword(passwordHash, password);
-      this.innerHTML = this.content!;
+      window.location.reload();
     } else {
       const alert = this.shadowRoot!.querySelector("sl-alert")!;
       alert.toast();
